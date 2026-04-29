@@ -1,0 +1,88 @@
+.game-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--bg-darker), var(--bg-dark));
+  border-radius: 8px;
+  border: 1px solid var(--border-dark);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+}
+
+.game-form__image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.game-form__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.game-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.game-form__label {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--text-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.game-form__input,
+.game-form__textarea {
+  padding: 6px 10px;
+  background-color: var(--bg-darker);
+  border: 1px solid var(--border-dark);
+  border-radius: 4px;
+  color: var(--text-medium);
+  font-family: var(--font-family);
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.game-form__input:focus,
+.game-form__textarea:focus {
+  border-color: var(--blue);
+  background-color: rgba(33, 150, 243, 0.05);
+  box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.1);
+}
+
+.game-form__input::placeholder,
+.game-form__textarea::placeholder {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.game-form__textarea {
+  resize: vertical;
+  min-height: 40px;
+}
+
+.game-form__actions {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.game-form__btn--cancel {
+  background-color: var(--danger-red);
+}
+
+.game-form__error {
+  color: var(--danger-red);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
